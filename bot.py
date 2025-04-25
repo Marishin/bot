@@ -6,6 +6,12 @@ from random import randint
 
 load_dotenv()
 bot_token = getenv("TOKEN")
+if not bot_token:
+    print("❌ Токен не найден в .env!")
+    exit(1)
+else :
+    print(bot_token)
+
 bot = telebot.TeleBot(bot_token)
 
 # База слов
