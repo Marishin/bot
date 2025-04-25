@@ -1,13 +1,13 @@
 import telebot
 from telebot.types import Message, ReplyKeyboardMarkup, KeyboardButton
-from os import getenv
+import os
 from dotenv import load_dotenv
 from random import randint
 
 load_dotenv()
-bot_token = getenv("TOKEN")
+bot_token = os.getenv("TOKEN") or os.environ.get("TOKEN")
 if not bot_token:
-    print("❌ Токен не найден в .env!")
+    print("❌ Токен не найден")
     exit(1)
 else :
     print(bot_token)
