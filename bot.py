@@ -7,7 +7,7 @@ from random import randint
 load_dotenv()
 bot_token = os.getenv("TOKEN") or os.environ.get("TOKEN")
 if not bot_token:
-    print("❌ Токен не найден")
+    print("❌ Токен не  найден")
     exit(1)
 else :
     print(bot_token)
